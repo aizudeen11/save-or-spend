@@ -35,7 +35,7 @@ n : number of times interest is compounded per year
 t : number of years the money is invested.
 
 # how to use
-call the class function **Calculation** and enter your data__< br / >
+<p>call the class function **Calculation** and enter your data__< br / >
 loan_interest: float - annual loan interest__< br / >
 loan_amount: float  - loan principal__< br / >
 ln_tenure: float - loan tenure__< br / >
@@ -43,4 +43,4 @@ fv_interest_rate: float - annual interest rate for investment account__< br / >
 every_rm= 100 - default at RM100__ < br / >
 until_rm=1000 - default at rm1000__< br / >
 fv_n=12 - default at 12 month__< br / >
-ln_n=12 - default at 12 month__< br / >
+ln_n=12 - default at 12 month__< br / ><p/>
