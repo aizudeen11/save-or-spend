@@ -30,6 +30,17 @@ P : amount of each monthly deposit.
 
 r : annual interest rate (as a decimal).
 
-n : number of times interest is compounded per year (for monthly compounding, 
+n : number of times interest is compounded per year 
 
 t : number of years the money is invested.
+
+# how to use
+call the class function **Calculation** and enter your data
+loan_interest: float - annual loan interest
+loan_amount: float  - loan principal
+ln_tenure: float - loan tenure
+fv_interest_rate: float - annual interest rate for investment account
+every_rm= 100 - default at RM100 
+until_rm=1000 - default at rm1000
+fv_n=12 - default at 12 month
+ln_n=12 - default at 12 month
