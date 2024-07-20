@@ -39,7 +39,7 @@ t : number of years the money is invested.
 <p>loan_interest: float - annual loan interest<p/>
 <p>loan_amount: float  - loan principal<p/>
 <p>ln_tenure: float - loan tenure<p/>
-<p>fv_interest_rate: float - annual interest rate for investment account<p/>
+<p>fv_interest_rate: float - average annual interest rate for investment account<p/>
 <p>every_rm= 100 - default at RM100<p/>
 <p>until_rm=1000 - default at rm1000<p/>
 <p>fv_n=12 - default at 12 month<p/>
