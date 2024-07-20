@@ -7,18 +7,29 @@ this is the purpose of this program. it will calculate and compare your investme
 
 # formula use
 Equated Monthly Instalment
+
 EMI/M = P x R x (1+R)^N / [(1+R)^N-1]
+
 P: Principal loan amount 
+
 N: Loan tenure in months 
+
 R: Interest rate per month
 
 from EMI, formula to get loan tenure
+
 N = ln(M/(M-PR))/ln(1+R)
 
 future value
+
 A=P([(1+r/n)^nt]-1)/(r/n)
+
 A : future value of the annuity (the investment account).
+
 P : amount of each monthly deposit.
+
 r : annual interest rate (as a decimal).
+
 n : number of times interest is compounded per year (for monthly compounding, 
+
 t : number of years the money is invested.
