@@ -50,4 +50,5 @@ then you can call **compile()** function
 example - 
 
 calc = Calculation(loan_interest=0.0385,loan_amount=100000, ln_tenure=35, fv_interest_rate=0.054, every_rm = 100, until_rm = 3000)
+
 grf1, grf2, df = calc.compile()
