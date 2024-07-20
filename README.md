@@ -44,3 +44,10 @@ t : number of years the money is invested.
 <p>until_rm=1000 - default at rm1000<p/>
 <p>fv_n=12 - default at 12 month<p/>
 <p>ln_n=12 - default at 12 month<p/>
+
+then you can call **compile()** function 
+
+example - 
+
+calc = Calculation(loan_interest=0.0385,loan_amount=100000, ln_tenure=35, fv_interest_rate=0.054, every_rm = 100, until_rm = 3000)
+grf1, grf2, df = calc.compile()
