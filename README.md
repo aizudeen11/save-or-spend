@@ -1,54 +1,85 @@
-# save-or-spend
-if you have a loan with a bank. you might want to pay the bank more than your monthly installment, probably because you want to pay less interest or to settle the loan faster or improve credit score. however we have another option. instead use the extra money in monthly loan installments, you might want to use it to invest in investment account such as fixed deposit or EPF. 
+# 💰 Save or Spend: Loan vs Investment Optimization Model
 
-but which option will you choose? to spend it and pay more in loan monthly installments or save it in investment account? 
+This project helps answer a practical personal finance and macro-financial decision problem:
 
-this is the purpose of this program. it will calculate and compare your investment value (if you save it in investment account) and interest saving (if you pay more in monthly loan installments) 
+> Should you use extra cash to **prepay your loan** or **invest it instead**?
 
-# formula use
-Equated Monthly Instalment
+It builds a comparative framework between:
+- 📉 Interest savings from early loan repayment  
+- 📈 Returns from investing in financial instruments  
+
+The goal is to identify which option yields higher financial benefit over time.
+
+---
+
+## 🧠 Concept
+
+When you have a loan (e.g. housing or personal loan), you often have two choices:
+
+### Option 1: Prepay Loan
+- Reduce outstanding principal
+- Save on total interest paid
+- Shorten loan tenure
+
+### Option 2: Invest Extra Cash
+- Place additional monthly payments into investment accounts
+- Earn compound returns (e.g. fixed deposit, EPF, etc.)
+- Grow wealth over time
+
+This model quantifies both options for direct comparison.
+
+---
+
+## 📊 Key Features
+
+- Computes **loan amortization (EMI model)**
+- Estimates **loan tenure dynamically**
+- Simulates **investment growth (future value of annuity)**
+- Compares:
+  - Interest saved from loan prepayment
+  - Wealth generated from investment
+- Generates:
+  - 📈 Comparative graphs
+  - 📊 Summary dataset
+
+---
+
+## 📐 Mathematical Framework
+
+### 🏦 1. Equated Monthly Instalment (EMI)
 
 EMI/M = P x R x (1+R)^N / [(1+R)^N-1]
 
-P: Principal loan amount 
+Where:
+- **P** = Principal loan amount  
+- **R** = Monthly interest rate  
+- **N** = Loan tenure (months)  
 
-N: Loan tenure in months 
+---
 
-R: Interest rate per month
-
-from EMI, formula to get loan tenure
+### ⏳ 2. Loan Tenure Formula
 
 N = ln(M/(M-PR))/ln(1+R)
 
-future value
+Where:
+- **M** = Monthly installment (EMI)  
 
-A=P([(1+r/n)^nt]-1)/(r/n)
+---
 
-A : future value of the annuity (the investment account).
+### 📈 3. Future Value of Investment (Annuity)
 
-P : amount of each monthly deposit.
+A = P([(1+r/n)^nt]-1)/(r/n)
 
-r : annual interest rate (as a decimal).
+Where:
+- **A** = Future value  
+- **P** = Monthly investment amount  
+- **r** = Annual interest rate  
+- **n** = Compounding frequency per year  
+- **t** = Time in years  
 
-n : number of times interest is compounded per year 
+---
 
-t : number of years the money is invested.
+## 🧩 Project Structure
 
-# how to use
-<p>call the class function **Calculation** and enter your data<p/>
-<p>loan_interest: float - annual loan interest<p/>
-<p>loan_amount: float  - loan principal<p/>
-<p>ln_tenure: float - loan tenure<p/>
-<p>fv_interest_rate: float - average annual interest rate for investment account<p/>
-<p>every_rm= 100 - default at RM100<p/>
-<p>until_rm=1000 - default at rm1000<p/>
-<p>fv_n=12 - default at 12 month<p/>
-<p>ln_n=12 - default at 12 month<p/>
-
-then you can call **compile()** function 
-
-example - 
-
-calc = Calculation(loan_interest=0.0385,loan_amount=100000, ln_tenure=35, fv_interest_rate=0.054, every_rm = 100, until_rm = 3000)
-
-grf1, grf2, df = calc.compile()
+```bash id="calc-structure"
+Calculation.ipynb
